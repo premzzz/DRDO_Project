@@ -1,4 +1,27 @@
 
+
+
+Step 2: Transfer the FilesCopy the entire python_packages folder onto a USB flash drive.Safely unplug the drive.Plug it into the offline computer.Copy the folder to the offline computer's local drive 
+(e.g., C:\python_packages).
+
+Step 3: Install the Library (On the Offline PC)Open the terminal on the offline computer, navigate to your folder, and point pip to the local files instead of the internet.
+Run this command:
+
+bashpip install --no-index --find-links="C:\python_packages" library_name
+
+Use code with caution.--no-index: Tells pip to ignore the online PyPI repository.--find-links: Directs pip to look inside your local folder for the files.
+Important Compatibility RulesEnsure the online computer and the offline computer share matching specifications.
+If they differ, manually download files using specific flags:Matching Python Versions: Download for the offline version using --python-version 3.11.
+Matching Operating Systems: Download for the offline OS using --platform win_amd64 (Windows) or --platform manylinux2014_x86_64 (Linux).
+
+
+
+
+
+
+
+
+
 ## NO CLOSE FILE TYPE 1
 
 #define LOG_FLAG(name) do {                          \
